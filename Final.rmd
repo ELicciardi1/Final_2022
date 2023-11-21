@@ -65,7 +65,11 @@ maleFisher
 ### Confidence Interval
 
 ```{r}
-
+oddsMale = maleFisher$estimate/(maleFisher$estimate +1)*100
+print(oddsMale)
+maleLow=(maleFisher$conf.int[1]/(maleFisher$conf.int[1]+1))*100
+maleHigh=(maleFisher$conf.int[2]/(maleFisher$conf.int[2]+1))*100
+cat("\n","Condifence interval for Males: ",maleLow," to ",maleHigh)
 ```
 
 ## Females
@@ -97,7 +101,11 @@ femaleFisher
 ### Confidence Interval
 
 ```{r}
-
+oddsFemale = femaleFisher$estimate/(femaleFisher$estimate +1)*100
+print(oddsFemale)
+femaleLow=(femaleFisher$conf.int[1]/(femaleFisher$conf.int[1]+1))*100
+femaleHigh=(femaleFisher$conf.int[2]/(femaleFisher$conf.int[2]+1))*100
+cat("\n","Condifence interval for Females: ",femaleLow," to ",femaleHigh)
 ```
 
 ## LGBTQ
@@ -129,7 +137,11 @@ lgbtqFisher
 ### Confidence Interval
 
 ```{r}
-
+oddsLGBTQ = lgbtqFisher$estimate/(lgbtqFisher$estimate +1)*100
+print(oddsLGBTQ)
+lgbtqLow=(lgbtqFisher$conf.int[1]/(lgbtqFisher$conf.int[1]+1))*100
+lgbtqHigh=(lgbtqFisher$conf.int[2]/(lgbtqFisher$conf.int[2]+1))*100
+cat("\n","Condifence interval for LGBTQ: ",lgbtqLow," to ",lgbtqHigh)
 ```
 
 ## Drug Users
@@ -161,7 +173,11 @@ drugFisher
 ### Confidence Interval
 
 ```{r}
-
+oddsDrug = drugFisher$estimate/(drugFisher$estimate +1)*100
+print(oddsDrug)
+drugLow=(drugFisher$conf.int[1]/(drugFisher$conf.int[1]+1))*100
+drugHigh=(drugFisher$conf.int[2]/(drugFisher$conf.int[2]+1))*100
+cat("\n","Condifence interval for Drug Users: ",drugLow," to ",drugHigh)
 ```
 
 # Overall Results and Conclusions
