@@ -56,7 +56,10 @@ colPerc(tableMale)
 ### Inferential Results
 
 ```{r}
-
+chisq.test(tableMale)
+chisqtestGC(tableMale)
+maleFisher <- fisher.test(tableMale)
+maleFisher
 ```
 
 ### Confidence Interval
@@ -85,7 +88,10 @@ colPerc(tableFemale)
 ### Inferential Results
 
 ```{r}
-
+chisq.test(tableFemale)
+chisqtestGC(tableFemale)
+femaleFisher <- fisher.test(tableFemale)
+femaleFisher
 ```
 
 ### Confidence Interval
@@ -114,7 +120,10 @@ colPerc(tableLGBTQ)
 ### Inferential Results
 
 ```{r}
-
+chisq.test(tableLGBTQ)
+chisqtestGC(tableLGBTQ)
+lgbtqFisher <- fisher.test(tableLGBTQ)
+lgbtqFisher
 ```
 
 ### Confidence Interval
@@ -143,7 +152,10 @@ colPerc(tableDrug)
 ### Inferential Results
 
 ```{r}
-
+chisq.test(tableDrug)
+chisqtestGC(tableDrug)
+drugFisher <- fisher.test(tableDrug)
+drugFisher
 ```
 
 ### Confidence Interval
