@@ -28,7 +28,11 @@ drugUser = filter(FinalData, DrugUser =="yes")
 
 # Introduction
 
-A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
+A new prospective vaccine for Covid is being produced and is undergoing clinical trials. This vaccine by its nature will effect different sections of the population differently and be more effective for some and less effective for others. The subsets of the population in question for the purposes of this research are: Male, Female, LGBTQ, and Drug Users. Each subset will undergo the same testing for the efficacy of the vaccine to determine its effectiveness.
+
+$H_0$ : There are NO statistically significant difference in the data, meaning the vaccine and placebo are equally as effective.
+
+$H_A$ : There are statistically significant difference in the data, meaning the vaccine and placebo are NOT equally as effective.
 
 # Methods
 
@@ -80,6 +84,8 @@ cat("\n","Condifence interval for Males: ",maleLow," to ",maleHigh)
 barchartGC(~infected + treatment,data=female)
 barchartGC(~infected + treatment,data=female, type="percent")
 ```
+
+Above is a Barchart comparing the graphical results of only males collected from the data. It is comparing rates of contracting Covid 19 as compared by vaccination status. The left shows people who contracted Covid 19
 
 ### Numerical Results
 
