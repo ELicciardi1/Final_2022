@@ -49,6 +49,10 @@ barchartGC(~infected + treatment,data=male)
 barchartGC(~infected + treatment,data=male, type="percent")
 ```
 
+Above is a Barchart comparing the graphical results of only males collected from the data. It is comparing rates of contracting Covid 19 as compared by vaccination status. The left shows people who contracted Covid 19 and the right shows men who have not.
+
+It is clear to see that more than twice the percentage of people who are in the placebo group contracted covid where people who did not contract covid are very closly related. Given the sample size it is unlikely that this happened by chance alone.
+
 ### Numerical Results
 
 ```{r}
@@ -56,6 +60,8 @@ tableMale <- xtabs(~infected + treatment, data=male)
 rowPerc(tableMale)
 colPerc(tableMale)
 ```
+
+The numerical results compound on what the grpahical results were telling us, the placebo group contracted Covid approximatly 70% of the time where the vaccinated group contracted Covid 30% of the time. We can see that the vaccine is generally effective in this testing scenario.
 
 ### Inferential Results
 
@@ -85,7 +91,9 @@ barchartGC(~infected + treatment,data=female)
 barchartGC(~infected + treatment,data=female, type="percent")
 ```
 
-Above is a Barchart comparing the graphical results of only males collected from the data. It is comparing rates of contracting Covid 19 as compared by vaccination status. The left shows people who contracted Covid 19
+Above is a Barchart comparing the graphical results of only famales collected from the data. It is comparing rates of contracting Covid 19 as compared by vaccination status. The left shows women who contracted Covid 19 and the right shows women who have not.
+
+It is clear to see that approximately one third more of the percentage of people who are in the placebo group contracted covid. Where people who did not contract covid are very closely related. 
 
 ### Numerical Results
 
@@ -122,6 +130,10 @@ cat("\n","Condifence interval for Females: ",femaleLow," to ",femaleHigh)
 barchartGC(~infected + treatment,data=lgbtq)
 barchartGC(~infected + treatment,data=lgbtq, type="percent")
 ```
+
+Above is a Barchart comparing the graphical results of only drug users collected from the data. It is comparing rates of contracting Covid 19 as compared by vaccination status. The left shows people who contracted Covid 19 and the right shows people who have not.
+
+Once again, it is clear to see that substantially more people who are in the vaccinated group contracted covid. Where people who did not contract covid are very closely related. Given the sample size it is unlikely that this happened by chance alone.
 
 ### Numerical Results
 
