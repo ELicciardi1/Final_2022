@@ -30,15 +30,106 @@ A new  preventative vaccine (covid921) is under test in clinical trials. Given t
 
 ## Males
 
+### Graphical Results
+
+```{r}
+
+```
+
+### Numerical Results
+
+```{r}
+
+```
+
+### Inferential Results
+
+```{r}
+
+```
+
+### Confidence Interval
+
+```{r}
+
+```
 
 ## Females
 
+### Graphical Results
+
+```{r}
+
+```
+
+### Numerical Results
+
+```{r}
+
+```
+
+### Inferential Results
+
+```{r}
+
+```
+
+### Confidence Interval
+
+```{r}
+
+```
 
 ## LGBTQ
 
+### Graphical Results
 
+```{r}
 
-## Druggies
+```
 
+### Numerical Results
+
+```{r}
+
+```
+
+### Inferential Results
+
+```{r}
+
+```
+
+### Confidence Interval
+
+```{r}
+
+```
+
+## Drug Users
+
+### Graphical Results
+
+```{r}
+
+```
+
+### Numerical Results
+
+```{r}
+
+```
+
+### Inferential Results
+
+```{r}
+
+```
+
+### Confidence Interval
+
+```{r}
+
+```
 
 # Overall Results and Conclusions
