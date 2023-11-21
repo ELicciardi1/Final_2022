@@ -18,10 +18,12 @@ FinalDat <-read.csv(file="final.csv",header=TRUE)
 FinalData <- FinalDat  %>% select(-one_of("X"))
 FinalData <- FinalData %>%
 mutate(across(where(is.character), as.factor))
+
 male = filter(FinalData, sex =="M")
 female = filter(FinalData, sex =="F")
 lgbtq = filter(FinalData, LGBTQ =="gay")
 drugUser = filter(FinalData, DrugUser =="yes")
+
 ```
 
 # Introduction
@@ -29,6 +31,8 @@ drugUser = filter(FinalData, DrugUser =="yes")
 A new  preventative vaccine (covid921) is under test in clinical trials. Given the nature of this vaccine it is suspected that the drug may exhibit different effectiveness across the variety of subpopulations tracked. Consider population subgroups by gender( guys and gals), drug use, and sexual orientation. Write a complete report that separately considers this drug for each subgroup and your recommendations as to whether people in the subgroup should take the vaccine. Structure your report in four sections each devoted to one of the four subgroups, use null and alternative hypothesis statements and correct statistical verbage when referencing p-values in conclusions.
 
 # Methods
+
+Looking at the data collected this is going to be a categorical explained by categorical. We will be using the candP helper file to use R studios built in bar charts to graphically display data, then we will be using xtabs to find the measures of center for the data. Because we are only comparing two types of data in this case we will not have to use any loops to measure multiple variables. 
 
 # Results
 
@@ -44,7 +48,9 @@ barchartGC(~infected + treatment,data=male, type="percent")
 ### Numerical Results
 
 ```{r}
-
+tableMale <- xtabs(~infected + treatment, data=male)
+rowPerc(tableMale)
+colPerc(tableMale)
 ```
 
 ### Inferential Results
@@ -71,7 +77,9 @@ barchartGC(~infected + treatment,data=female, type="percent")
 ### Numerical Results
 
 ```{r}
-
+tableFemale <- xtabs(~infected + treatment, data=female)
+rowPerc(tableFemale)
+colPerc(tableFemale)
 ```
 
 ### Inferential Results
@@ -98,7 +106,9 @@ barchartGC(~infected + treatment,data=lgbtq, type="percent")
 ### Numerical Results
 
 ```{r}
-
+tableLGBTQ <- xtabs(~infected + treatment, data=lgbtq)
+rowPerc(tableLGBTQ)
+colPerc(tableLGBTQ)
 ```
 
 ### Inferential Results
@@ -125,7 +135,9 @@ barchartGC(~infected + treatment,data=drugUser, type="percent")
 ### Numerical Results
 
 ```{r}
-
+tableDrug <- xtabs(~infected + treatment, data=drugUser)
+rowPerc(tableDrug)
+colPerc(tableDrug)
 ```
 
 ### Inferential Results
