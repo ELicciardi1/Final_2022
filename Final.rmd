@@ -36,7 +36,7 @@ $H_A$ : There are statistically significant difference in the data, meaning the 
 
 # Methods
 
-Looking at the data collected this is going to be a categorical explained by categorical. We will be using the candP helper file to use R studios built in bar charts to graphically display data, then we will be using xtabs to find the measures of center for the data. Because we are only comparing two types of data in this case we will not have to use any loops to measure multiple variables. 
+Looking at the data collected this is going to be a categorical explained by categorical, we will be creating separate data variables for each group to make it easier to isolate and test them. We will be using the candP helper file to use R studios built in bar charts to graphically display data, then we will be using xtabs to find the relevant percentages for the data. Because we are only comparing two types of data in this case we will not have to use any loops to measure multiple variables in the fisher test or run a fisherXY. 
 
 # Results
 
@@ -84,6 +84,8 @@ maleHigh=(maleFisher$conf.int[2]/(maleFisher$conf.int[2]+1))*100
 cat("\n","Condifence interval for Males: ",maleLow," to ",maleHigh)
 ```
 
+We see here that the confidence interval is >50% with a normal vaccine threshold of >60% this confidence interval is more than adequate to show that this is a good vaccine for this group.
+
 ## Females
 
 ### Graphical Results
@@ -127,6 +129,8 @@ femaleLow=(femaleFisher$conf.int[1]/(femaleFisher$conf.int[1]+1))*100
 femaleHigh=(femaleFisher$conf.int[2]/(femaleFisher$conf.int[2]+1))*100
 cat("\n","Condifence interval for Females: ",femaleLow," to ",femaleHigh)
 ```
+
+Once again we see that the confidence interval is >50% and includes the 60% threshold, it is less effective here than in the mens group but still a good vaccine.
 
 ## LGBTQ
 
@@ -172,6 +176,8 @@ lgbtqHigh=(lgbtqFisher$conf.int[2]/(lgbtqFisher$conf.int[2]+1))*100
 cat("\n","Condifence interval for LGBTQ: ",lgbtqLow," to ",lgbtqHigh)
 ```
 
+We see that the confidence interval is 7-26% far lower than 50% so we can say that this is not a very good vaccine.
+
 ## Drug Users
 
 ### Graphical Results
@@ -212,6 +218,8 @@ drugLow=(drugFisher$conf.int[1]/(drugFisher$conf.int[1]+1))*100
 drugHigh=(drugFisher$conf.int[2]/(drugFisher$conf.int[2]+1))*100
 cat("\n","Condifence interval for Drug Users: ",drugLow," to ",drugHigh)
 ```
+
+We see that the confidence interval is 4-21% far lower than 50% so we can say that this is also not a very good vaccine.
 
 # Overall Results and Conclusions
 
