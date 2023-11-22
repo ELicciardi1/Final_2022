@@ -120,6 +120,8 @@ femaleFisher <- fisher.test(tableFemale)
 femaleFisher
 ```
 
+The Chi Squared test shows that the P value for the tested data is smaller than the general use point of 0.05, infact it is $2.732\times10^{-4}$ which is a small number indicating that these is a difference in the data. The Chi-Squared statistic is also 13, being larger than our degrees of freedom of one from this data. The odds a man NOT getting the vaccine are 1.4 times higher than a man WITH the vaccine contracting covid.
+
 ### Confidence Interval
 
 ```{r}
@@ -129,6 +131,10 @@ femaleLow=(femaleFisher$conf.int[1]/(femaleFisher$conf.int[1]+1))*100
 femaleHigh=(femaleFisher$conf.int[2]/(femaleFisher$conf.int[2]+1))*100
 cat("\n","Condifence interval for Females: ",femaleLow," to ",femaleHigh)
 ```
+
+### Conclusion
+
+We can reject the $H_0$ in this case in favor of the $H_A$ for this case and determine that the vaccine is also effective in the female group given the graphical, numerical, and inferential results collected from the data.
 
 ## LGBTQ
 
