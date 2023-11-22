@@ -61,7 +61,7 @@ rowPerc(tableMale)
 colPerc(tableMale)
 ```
 
-The numerical results compound on what the grpahical results were telling us, the placebo group contracted Covid approximatly 70% of the time where the vaccinated group contracted Covid 30% of the time. We can see that the vaccine is generally effective in this testing scenario.
+The numerical results compound on what the graphical results were telling us, the placebo group contracted Covid approximately 70% of the time where the vaccinated group contracted Covid 30% of the time. We can see that the vaccine is generally effective in this testing scenario.
 
 ### Inferential Results
 
@@ -109,6 +109,8 @@ rowPerc(tableFemale)
 colPerc(tableFemale)
 ```
 
+The numerical results compound on what the graphical results were telling us, the placebo group contracted Covid approximately 60% of the time where the vaccinated group contracted Covid 40% of the time. We can see that the vaccine is generally effective in this testing scenario, although it is less effective then the male participants.
+
 ### Inferential Results
 
 ```{r}
@@ -149,6 +151,8 @@ rowPerc(tableLGBTQ)
 colPerc(tableLGBTQ)
 ```
 
+The numerical results compound on what the graphical results were telling us, the placebo group contracted Covid approximately 15% of the time where the vaccinated group contracted Covid 85% of the time. We can see that the vaccine is NOT effective in this testing scenario, in fact it is inversely effective and seems to put this group at a higher risk of contracting covid.
+
 ### Inferential Results
 
 ```{r}
@@ -184,6 +188,8 @@ tableDrug <- xtabs(~infected + treatment, data=drugUser)
 rowPerc(tableDrug)
 colPerc(tableDrug)
 ```
+
+The numerical results compound on what the graphical results were telling us, the placebo group contracted Covid approximately 10% of the time where the vaccinated group contracted Covid 90% of the time. We can see that the vaccine is NOT effective in this testing scenario, in fact it is inversely effective and seems to put this group at a higher risk of contracting covid. This group suffers from even more ill effects than the already negatively effected LGBTQ group.
 
 ### Inferential Results
 
